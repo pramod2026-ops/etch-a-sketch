@@ -1,14 +1,14 @@
 const container = document.querySelector("#container");
 const gridBtn = document.querySelector("#grid-btn");
 
-const gridSize = 500;
-
-const randomColor = function (number) {
-  return Math.floor(Math.random() * (number + 1));
+const randomChannel = function (max) {
+  return Math.floor(Math.random() * (max + 1));
 };
 
 function createGrid(size) {
+  const gridSize = container.offsetWidth;
   let squareSize = gridSize / size;
+
   for (let i = 0; i < size; i++) {
     for (let j = 0; j < size; j++) {
       const div = document.createElement("div");
@@ -16,27 +16,16 @@ function createGrid(size) {
       div.style.width = `${squareSize}px`;
       div.style.height = `${squareSize}px`;
 
-      let count = 0;
-      let red = randomColor(255);
-      let green = randomColor(255);
-      let blue = randomColor(255);
+      let red = randomChannel(255);
+      let green = randomChannel(255);
+      let blue = randomChannel(255);
 
       div.addEventListener("mouseover", function () {
-        count++;
         red = red * 0.9;
         green = green * 0.9;
         blue = blue * 0.9;
 
-        /*if (count === 10) {
-          div.style.backgroundColor = "black";
-        }
-
-        console.log(count);
-
-        div.style.backgroundColor = `rgb(${randomColor(255)} ${randomColor(255)} ${randomColor(255)})`;
-        replace with below logic*/
-
-        div.style.backgroundColor = `rgb(${red} ${green} ${blue})`;
+        div.style.backgroundColor = `rgb(${Math.floor(red)}, ${Math.floor(green)}, ${Math.floor(blue)})`;
       });
 
       container.appendChild(div);
