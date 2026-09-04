@@ -1,7 +1,5 @@
 # etch-a-sketch
 
-# Etch-a-Sketch
-
 A little drawing grid you can sketch on with your mouse, built while going through [The Odin Project](https://www.theodinproject.com/).
 
 ## What it does
@@ -19,16 +17,14 @@ Each square starts out as a random color, and every time you hover over it, the 
 ## What I learned
 
 - Creating and appending elements to the DOM with JavaScript
-- Building a grid layout with Flexbox instead of CSS Grid
+- Building a grid layout with flex-box instead of CSS Grid
 - A tricky bug where borders were throwing off my square sizes because of `box-sizing`
 - Making sizes responsive by reading the actual rendered width instead of hardcoding pixels
 
 ## Live demo
 
-[link here]
+[ETCH-A-Sketch] (https://pramod2026-ops.github.io/etch-a-sketch/)
 
 ## Screenshot
 
-## Screenshot
-
-![Etch-a-Sketch screenshot](./images/ss/etch4.pngscreenshot.png)
+![Etch-a-Sketch screenshot](./images/etch4.png)
