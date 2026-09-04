@@ -34,7 +34,7 @@ function createGrid(size) {
 }
 
 gridBtn.addEventListener("click", function () {
-  let input = Number(prompt("Select number of square per side"));
+  let input = Number(prompt("Select number of square per side:"));
 
   if (input < 1 || input > 100 || Number.isNaN(input)) {
     alert("Value should be between 1 and 100");
@@ -43,3 +43,4 @@ gridBtn.addEventListener("click", function () {
   container.innerHTML = "";
   createGrid(input);
 });
+createGrid(16);
